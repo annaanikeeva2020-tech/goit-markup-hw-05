@@ -424,7 +424,8 @@
 
 
 <footer class="page-footer">
-        <div class="container">
+
+    <div class="container">
 
             <div class="footer-info">
             <a class="footer-logo" href="./index.html">Web<span class="logo-part">Studio</span></a>
@@ -476,19 +477,22 @@
                     </li>
                 </ul>
         </div>
-        </div>
+        
 
     <div class="footer-subscribe">
             <p>Subscribe</p>
         <form class="form-footer" name="issue_report_form" autocomplete="off" novalidate>
         <input class="form-input" type="email" placeholder="E-mail" />
-        <button class="footer-form-button" type="submit">Subscribe</button>
+        <button class="footer-form-button" type="submit">
+            Subscribe
+        <svg class="footer-btn-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-send"></use>
+        </svg>
+        </button>
     </form>
     </div>
-</footer>
 
-    
-<div class="modal-overlay ">
+    <div class="modal-overlay is-open">
     <div class="modal">
         
     <form class="form" name="issue_report_form" autocomplete="off" novalidate>
@@ -499,22 +503,37 @@
 
         <label class="form-label">
             Name
+            <div class="input-wrap">
         <input class="form-input" type="text" name="name" autofocus />
+        <svg class="input-icon">
+            <use href="./images/icons.svg#icon-person"></use>
+        </svg>
+            </div>
            </label>
 
         <label class="form-label">
             Phone
-        <input class="form-input" type="text" name="phone" />
+        <div class="input-wrap">
+            <input class="form-input" type="text" name="phone" />
+            <svg class="input-icon">
+                <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+        </div>
         </label>
 
         <label class="form-label"></label>
            Email
-        <input class="form-input" type="text" name="email" />
+        <div class="input-wrap">
+            <input class="form-input" type="text" name="email" />
+            <svg class="input-icon">
+                <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+        </div>
         </label>
 
         <label class="label-comment">
             Comment
-            <textarea class="form-input" name="feedback" rows="5" placeholder="Text input"></textarea>
+            <textarea class="form-input textarea" name="feedback" rows="5" placeholder="Text input"></textarea>
         </label>
         
         <label>
@@ -525,8 +544,11 @@
         <button class="form-button" type="submit">Send</button>
     </form>
     </div>
+  </div>
 </div>
-    
+
+</footer>
+
 </body>
 
 </html>
