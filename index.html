@@ -495,7 +495,7 @@
 </footer>
 
 
-<div class="modal-overlay" id="modal">
+<div class="modal-overlay is-open" id="modal">
   <div class="modal">
         <button class="modal-close" 
         type="button" 
@@ -517,7 +517,7 @@
              <input class="form-input" 
                     type="text" 
                     name="name" 
-               id="name">
+                    id="name">
                
         <svg class="input-icon" width="18" height="24" aria-hidden="true">
             <use href="./images/icons.svg#icon-person"></use>
@@ -530,7 +530,8 @@
            <span class="input-wrap">
             <input class="form-input" 
                    type="tel" 
-                   name="phone" required >
+                   name="phone"
+                   id="phone" required >
              <svg class="input-icon" width="18" height="24" aria-hidden="true">
                 <use href="./images/icons.svg#icon-phone"></use>
              </svg>
@@ -542,7 +543,8 @@
            <span class="input-wrap">
             <input class="form-input" 
                    type="email" 
-                   name="email" required >
+                   name="email" 
+                   id="email" required >
             <svg class="input-icon" width="18" height="24" aria-hidden="true">
                 <use href="./images/icons.svg#icon-email"></use>
             </svg>
@@ -552,7 +554,8 @@
         <label class="form-label">
             Comment
             <textarea class="form-input textarea" 
-                      name="feedback" rows="5" 
+                      name="feedback"
+                      id="comment" rows="5" 
                       placeholder="Text input"></textarea>
         </label>
         
