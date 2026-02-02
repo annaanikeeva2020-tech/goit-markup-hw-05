@@ -12,17 +12,17 @@
     margin: 0 auto;
 }
 
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
         padding-left: 15px;
         padding-right: 15px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
     }
 }
 
@@ -35,11 +35,12 @@ h5,
 h6,
 p {
     margin: 0;
+    padding: 0;
 }
 
 ul,
 ol {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -54,16 +55,24 @@ body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    font-style: normal;
 }
 
+.section {
+    padding: 96px 0;
+}
 
 /* -----HEADER----- */
 
 
 .page-header {
-    justify-content: space-between;
+    /* justify-content: space-between; */
     border-bottom: 1px solid #e7e9fc;
-    align-items: center;
+    /* align-items: center; */
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
         0 1px 1px 0 rgba(46, 47, 66, 0.16),
         0 1px 6px 0 rgba(46, 47, 66, 0.08);;
@@ -71,16 +80,19 @@ body {
 
 .page-header .container {
     display: flex; /* в одну лінію навігацію + контакти */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
 .header-nav {
     display: flex;
     align-items: center;
-}
+} 
 
 .contacts {
-    font-style: normal;
+    /* font-style: normal; */
+    display: none;
 }
 
 .contacts-link {
@@ -166,6 +178,21 @@ a {
     color: #2e2f42;
 }
 
+.header-logo {
+    display: block;
+    padding: 16px 0;
+}
+
+.burger-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.burger-icon {
+    display: block;
+    fill: #2f2f37;
+}
 
 @media screen and (min-width: 768px) {
     .list {
@@ -204,7 +231,7 @@ a {
     background-image: linear-gradient( to bottom,
     rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
-    url("../images/people-office.jpg");
+    url("../images/bg-mobil.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -218,7 +245,7 @@ a {
     .hero {
         background-image:
             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/people-office.jpg);
+            url(../images/bg-mobil-x2.jpg);
     }
 }
 
@@ -276,7 +303,7 @@ a {
     .hero {
             background-image:
                 linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/people-office.jpg);
+                url(../images/bg-tabl.jpg);
             max-width: 768px;
             padding: 112px 0;
             background-position: center;
@@ -290,21 +317,40 @@ a {
     .button {
             margin-top: 36px;
     }
+    
+    @media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image:
+             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+             url(../images/bg-tabl-x2.jpg);
+    }
+}
 }
 
 
 @media screen and (min-width: 1158px) {
     .hero {
-            background-image:
-                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-                url(../images/people-office.jpg);
-            max-width: 1440px;
-            background-position: center;
-            padding: 188px 0;
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office.jpg);
+        max-width: 1440px;
+        background-position: center;
+        padding: 188px 0;
         }
     
-    .order-button {
-            margin-top: 48px;
+    .button {
+        margin-top: 48px;
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-x2.jpg);
+    }
     }
 }
 
@@ -696,6 +742,10 @@ p {
 
 @media screen and (min-width: 768px) {
 
+    .portfolio-list {
+        row-gap: 72px;
+    }
+
     .portfolio-section .container ul {
         flex-direction: row;
     }
@@ -707,8 +757,16 @@ p {
 
 @media screen and (min-width: 1158px) {
 
+    .portfolio-list {
+        row-gap: 48px;
+    }
+
     .portfolio-section .container li {
         width: calc((100% - 48px) / 3);
+    }
+
+    .portfolio-card {
+        box-shadow: none;
     }
 
 }
@@ -727,7 +785,7 @@ p {
     align-items: baseline;
     flex-direction: column;
     align-items: baseline;
-    text-align: center;
+    /* text-align: center; */
     gap: 72px;
 }
 
@@ -741,8 +799,8 @@ p {
     /* text-transform: uppercase;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
-    font-size: 18px;
-    color: #4d5ae5; */
+    font-size: 18px;*/
+    color: #4d5ae5; 
     margin: 0 auto;
 }
 
